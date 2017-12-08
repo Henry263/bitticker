@@ -4,3 +4,15 @@
 	border: 2px solid blue;
 	font-size: 1.2rem;
 }
+
+.button-holder{
+	margin-top: 50px;
+}
+
+#sellButton{
+	padding: 20px 40px;
+	border: 2px solid silver;
+	border-radius: 5px;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
