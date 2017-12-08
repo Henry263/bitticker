@@ -3,32 +3,29 @@
 $(function() {
 
 
-
-    var geocodingAPI = "https://api.coindesk.com/v1/bpi/currentprice.json";
-
-    $.getJSON(geocodingAPI, function(json) {
-
-        console.log(JSON.stringify(json));
-        var bitcoinProce = JSON.stringify(json.bpi.USD.rate)
-
-    });
-
-
+    var btcUrl = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
     function myTimer() {
         console.log(' each 1 minute...');
+        getBtcPrice(btcUrl, function(returndata) {
+            //received data!
+            console.log(JSON.stringify(returndata));
+            bitcoinProce = JSON.stringify(returndata.bpi.USD.rate);
 
-        $.getJSON(geocodingAPI, function(json) {
+            $.notify("Bitcoin Ticker", {
+                title: "This is current BTC price!" + bitcoinProce
+            });
+        })
 
-            console.log(JSON.stringify(json));
-            var bitcoinProce = JSON.stringify(json.bpi.USD.rate)
+    }
 
-        });
-        $.notify("Custom Title", {
-            title: "This is current BTC price!" + bitcoinProce
+    var myVar = setInterval(myTimer, 30000);
+
+    function getBtcPrice(btcUrl, callback) {
+        $.getJSON(btcUrl, function(returndata) {
+            callback(returndata);
         });
     }
 
-    var myVar = setInterval(myTimer, 60000);
 
 });
