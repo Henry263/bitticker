@@ -12,6 +12,13 @@ $(function() {
     });
     */
 
+    var counter = 0;
+    if(counter == 0)
+    {
+        counter++;
+        myTimer();
+    }
+
     function myTimer() {
         console.log(' each 1 minute...');
         getBtcPrice(allCoins, function(returndata) {
