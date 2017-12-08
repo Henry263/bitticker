@@ -23,20 +23,13 @@ $(function() {
             var ltcPrice = returndata.LTC.USD
 
 
-            var btcString = "Bitcoin Price :: " + btcPrice;
-             var ethString =" Etherium Price :: " + ethPrice;
-             var ltcString = " Litecoin Price :: " + ltcPrice;
+            var btcString = "BTC:"+btcPrice+"-ETH:" +ethPrice+"-LTC:"+ltcPrice;
             //console.log(notificationString);
         
             $.notify("Bit update", {
                 title: btcString
             });
-            $.notify("Etherium update", {
-                title: ethString
-            });
-            $.notify("Litecoin update", {
-                title: ltcString
-            });
+            
 
         });
     }
