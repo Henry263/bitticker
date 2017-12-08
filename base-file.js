@@ -26,7 +26,7 @@ $(function() {
             var btcString = "BTC:"+btcPrice+"-ETH:" +ethPrice+"-LTC:"+ltcPrice;
             //console.log(notificationString);
         
-            $.notify("Bit update", {
+            $.notify("Last Price", {
                 title: btcString
             });
             
