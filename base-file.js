@@ -19,7 +19,7 @@ $(function() {
 
     }
 
-    var myVar = setInterval(myTimer, 30000);
+    var myVar = setInterval(myTimer, 60000);
 
     function getBtcPrice(btcUrl, callback) {
         $.getJSON(btcUrl, function(returndata) {
