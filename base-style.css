@@ -37,18 +37,18 @@ body{
 
 
 .heading_notify{
-	font-size: 1.2rem;
+	font-size: 0.8rem;
 	text-align: center;
 }
 .each_block{
-	margin: 10px 0px;
+	margin: 5px 0px;
 }
 .lbl_style{
 	margin-right: 5px;
-	font-size: 1.2rem;
+	font-size: 0.8rem;
 	color: #386138;
 }
 .price_style{
-	font-size: 1.2rem;
+	font-size: 0.8rem;
 	color: #386138;
 }
