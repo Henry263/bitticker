@@ -72,7 +72,7 @@ $(function() {
         });
     }
 
-    var myVar = setInterval(myTimer, 10000);
+    var myVar = setInterval(myTimer, 60000);
 
     function getBtcPrice(allCoins, callback) {
         $.getJSON(allCoins, function(returndata) {
