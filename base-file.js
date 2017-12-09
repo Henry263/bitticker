@@ -13,8 +13,7 @@ $(function() {
     */
 
     var counter = 0;
-    if(counter == 0)
-    {
+    if (counter == 0) {
         counter++;
         myTimer();
     }
@@ -30,14 +29,44 @@ $(function() {
             var ltcPrice = returndata.LTC.USD
 
 
-            var btcString = "BTC:"+btcPrice+"-ETH:" +ethPrice+"-LTC:"+ltcPrice;
-            //console.log(notificationString);
-        
+            var btcString = "BTC:" + btcPrice + "-ETH:" + ethPrice + "-LTC:" + ltcPrice;
+            console.log(btcString);
+            /*
             $.notify("Last Price", {
                 title: btcString
             });
-            
+            */
+            var priceElemet = '<div>' +
+                '<div class="heading_notify"> Last price of coins</div>' +
+                '<div class="each_block"><span class="lbl_style">BTC Price: </span><span class="price_style"> $'+btcPrice+' </span></div>' +
+                '<div class="each_block"><span class="lbl_style">ETH Price: </span><span class="price_style"> $'+ethPrice+' </span></div>' +
+                '<div class="each_block"><span class="lbl_style">LTC Price: </span><span class="price_style"> $'+ltcPrice+' </span></div>' +
+                '<div><span data-notify-text/></div></div>';
 
+            $.notify.addStyle('happyblue', {
+                html: priceElemet,
+                classes: {
+                    base: {
+                        "white-space": "nowrap",
+                        "background-color": "#d9edff",
+                        "padding": "15px",
+                        "font-size": "1rem",
+                        "font-family": "sans-serif",
+                        "border-radius": "5px",
+                        "color": "#4a4747"
+                    },
+                    superblue: {
+                        "color": "white",
+                        "background-color": "blue"
+                    }
+                }
+            });
+
+            $.notify('From: Bit Ticker', {
+                style: 'happyblue',
+                autoHide: true,
+                autoHideDelay: 6000,
+            });
         });
     }
 

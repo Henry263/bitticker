@@ -16,10 +16,6 @@
 	font-size: 1.1rem;
 	cursor: pointer;
 }
-body{
-
-}
-
 img.notifyimg {
     width: 100%;
     
@@ -33,4 +29,26 @@ img.notifyimg {
     font-family: sans-serif;
     text-align: center;
     margin: 20px 0px;
+}
+
+body{
+
+}
+
+
+.heading_notify{
+	font-size: 1.2rem;
+	text-align: center;
+}
+.each_block{
+	margin: 10px 0px;
+}
+.lbl_style{
+	margin-right: 5px;
+	font-size: 1.2rem;
+	color: #386138;
+}
+.price_style{
+	font-size: 1.2rem;
+	color: #386138;
 }
