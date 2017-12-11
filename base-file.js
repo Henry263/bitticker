@@ -4,7 +4,7 @@ $(function() {
 
 
     var btcUrl = "https://api.coindesk.com/v1/bpi/currentprice.json";
-    var allCoins = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD";
+    var allCoins = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,IOT&tsyms=USD";
 
     /*
     $.getJSON(allCoins, function(jsonData) {
@@ -27,9 +27,10 @@ $(function() {
             var btcPrice = returndata.BTC.USD
             var ethPrice = returndata.ETH.USD
             var ltcPrice = returndata.LTC.USD
+            var iotPrice = returndata.IOT.USD
 
 
-            var btcString = "BTC:" + btcPrice + "-ETH:" + ethPrice + "-LTC:" + ltcPrice;
+            var btcString = "BTC:" + btcPrice + "-ETH:" + ethPrice + "-LTC:" + ltcPrice + "-IOT:" + iotPrice;
             console.log(btcString);
             
             $.notify("Last Price", {
