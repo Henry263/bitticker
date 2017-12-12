@@ -30,7 +30,7 @@ $(function() {
             var iotPrice = returndata.IOT.USD
 
  
-            var btcString = "BTC: " + btcPrice + "\nETH: " + ethPrice + "\nLTC: " + ltcPrice + "\nIOT: " + iotPrice;
+            var btcString = "BTC: " + btcPrice + ",ETH: " + ethPrice + ",LTC: " + ltcPrice + ",IOT: " + iotPrice;
             console.log(btcString);
             
             $.notify("Last Price", {
