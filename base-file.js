@@ -32,12 +32,15 @@ $(function() {
             var xrpPrice = returndata.XRP.USD
 
 
-            var btcString = "BTC: " + btcPrice + ",\nETH: " + ethPrice + ",\nLTC: " + ltcPrice + ",\nIOT: " + iotPrice + ",\nIOT:" + xrpPrice;
+            //var btcString = "BTC: " + btcPrice + ",ETH: " + ethPrice + ",LTC: " + ltcPrice + ",IOT: " + iotPrice + ",XRP:" + xrpPrice;
+            var btcString = $("BTC: " + btcPrice + ",ETH: " + ethPrice + ",LTC: " + ltcPrice + ",IOT: " + iotPrice + ",XRP:" + xrpPrice);
             console.log(btcString);
 
 
+            var testHtml = $('<div class=""> BTC: '+ btcPrice + '" </div><div class="">ETH '+ ethPrice + '"</div><div class="">LTC: '+ ltcPrice + '"</div><div class="">IOT: '+ iotPrice + '"</div><div class="">XRP: '+ xrpPrice + '"</div>');
+
             Push.create("Crypto Prices", {
-                body: btcString,
+                body: testHtml,
                 timeout: 4000,
                 onClick: function() {
                     window.focus();
