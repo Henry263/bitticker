@@ -4,7 +4,7 @@ $(function() {
 
 
     var btcUrl = "https://api.coindesk.com/v1/bpi/currentprice.json";
-    var allCoins = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,IOT&tsyms=USD";
+    var allCoins = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,IOT,XRP&tsyms=USD";
 
     /*
     $.getJSON(allCoins, function(jsonData) {
@@ -13,14 +13,14 @@ $(function() {
     */
 
     Push.create("Hello world!", {
-    body: "How's it hangin'?",
-    icon: '/icon.png',
-    timeout: 4000,
-    onClick: function () {
-        window.focus();
-        this.close();
-    }
-});
+        body: "How's it hangin'?",
+        icon: '/icon.png',
+        timeout: 4000,
+        onClick: function() {
+            window.focus();
+            this.close();
+        }
+    });
 
     var counter = 0;
     if (counter == 0) {
@@ -38,15 +38,26 @@ $(function() {
             var ethPrice = returndata.ETH.USD
             var ltcPrice = returndata.LTC.USD
             var iotPrice = returndata.IOT.USD
+            var xrpPrice = returndata.XRP.USD
 
- 
-            var btcString = "BTC: " + btcPrice + ",ETH: " + ethPrice + ",LTC: " + ltcPrice + ",IOT: " + iotPrice;
+
+            var btcString = "BTC: " + btcPrice + ",\nETH: " + ethPrice + ",\nLTC: " + ltcPrice + ",\nIOT: " + iotPrice + ",\nIOT:" + xrpPrice;
             console.log(btcString);
-            
+
+
+            Push.create(Crypto Prices, {
+                body: btcString,
+                timeout: 4000,
+                onClick: function() {
+                    window.focus();
+                    this.close();
+                }
+            });
+            /*
             $.notify("Last Price", {
                 title: btcString
             });
-            
+            */
             /*
             var priceElemet = '<div>' +
                 '<div class="heading_notify"> Last price of coins</div>' +
