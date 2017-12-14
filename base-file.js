@@ -59,9 +59,8 @@ $(function() {
             });
 
             function callChild() {
-
+                clearTimeout(myVar);
                 Push.create("Crypto Prices 2", {
-                    clearTimeout(myVar);
                     body: btcString1,
                     timeout: 4000,
                     onClick: function() {
