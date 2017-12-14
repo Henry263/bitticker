@@ -37,7 +37,7 @@ $(function() {
             console.log(btcString);
 
 
-            var testHtml = $('<div > BTC: '+ btcPrice + ' </div><div>ETH '+ ethPrice + '</div><div>LTC: '+ ltcPrice + '</div><div>IOT: '+ iotPrice + '</div><div>XRP: '+ xrpPrice + '</div>');
+            var testHtml = $('<div > BTC: </div><div>ETH </div><div>LTC: </div><div>IOT: </div><div>XRP: </div>');
 
             Push.create("Crypto Prices", {
                 body: testHtml,
