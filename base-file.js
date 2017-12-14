@@ -58,7 +58,7 @@ $(function() {
                 }
             });
 
-            var myVar = setTimeout(callChild(), 4500);
+            var myVar = setTimeout(callChild, 4500);
             function callChild() {
                 clearTimeout(myVar);
                 Push.create("Crypto Prices 2", {
