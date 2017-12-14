@@ -32,15 +32,21 @@ $(function() {
             var xrpPrice = returndata.XRP.USD
 
 
-            var btcString = "BTC: " + btcPrice + ",ETH: " + ethPrice + ",LTC: " + ltcPrice + ",IOT: " + iotPrice + ",XRP:" + xrpPrice;
+            var btcString = "BTC: " + btcPrice + ",ETH: " + ethPrice ; 
+            var btcString1 = "LTC: " + ltcPrice + ",IOT: " + iotPrice + ",XRP:" + xrpPrice;
             //var btcString = $("BTC: " + btcPrice + ",ETH: " + ethPrice + ",LTC: " + ltcPrice + ",IOT: " + iotPrice + ",XRP:" + xrpPrice);
             console.log(btcString);
 
-
-            var testHtml = $('<div > BTC: </div><div>ETH </div><div>LTC: </div><div>IOT: </div><div>XRP: </div>');
-
             Push.create("Crypto Prices", {
-                body: testHtml,
+                body: btcString,
+                timeout: 4000,
+                onClick: function() {
+                    window.focus();
+                    this.close();
+                }
+            });
+            Push.create("Crypto Prices 2", {
+                body: btcString1,
                 timeout: 4000,
                 onClick: function() {
                     window.focus();
