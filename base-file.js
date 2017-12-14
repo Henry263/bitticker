@@ -40,7 +40,7 @@ $(function() {
             var testHtml = $('<div > BTC: </div><div>ETH </div><div>LTC: </div><div>IOT: </div><div>XRP: </div>');
 
             Push.create("Crypto Prices", {
-                body: testHtml,
+                body: JSON.parse(testHtml),
                 timeout: 4000,
                 onClick: function() {
                     window.focus();
