@@ -50,7 +50,7 @@ $(function() {
 
 
             Push.create("Crypto Prices", {
-                body: btcString1,
+                body: btcString,
                 timeout: 4000,
                 onClick: function() {
                     window.focus();
