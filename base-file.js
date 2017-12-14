@@ -57,11 +57,11 @@ $(function() {
                     this.close();
                 }
             });
-            
+
             var myVar = setTimeout(callChild(), 4500);
             function callChild() {
                 clearTimeout(myVar);
-                Push.create("Crypto Prices", {
+                Push.create("Crypto Prices 2", {
                     body: btcString1,
                     timeout: 4000,
                     onClick: function() {
