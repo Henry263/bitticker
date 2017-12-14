@@ -51,19 +51,19 @@ $(function() {
 
             Push.create("Crypto Prices", {
                 body: btcString,
-                timeout: 4000,
+                timeout: 2500,
                 onClick: function() {
                     window.focus();
                     this.close();
                 }
             });
 
-            var myVar = setTimeout(callChild, 4500);
+            var myVar = setTimeout(callChild, 3000);
             function callChild() {
                 clearTimeout(myVar);
                 Push.create("Crypto Prices 2", {
                     body: btcString1,
-                    timeout: 4000,
+                    timeout: 2500,
                     onClick: function() {
                         window.focus();
                         this.close();
