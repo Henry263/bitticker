@@ -36,7 +36,7 @@ $(function() {
             var btcString1 = "LTC: " + ltcPrice + ",IOT: " + iotPrice + ",XRP:" + xrpPrice;
             //var btcString = $("BTC: " + btcPrice + ",ETH: " + ethPrice + ",LTC: " + ltcPrice + ",IOT: " + iotPrice + ",XRP:" + xrpPrice);
             console.log(btcString);
-
+            /*
             Push.create("Crypto Prices", {
                 body: btcString,
                 timeout: 4000,
@@ -45,6 +45,7 @@ $(function() {
                     this.close();
                 }
             });
+            */
             Push.create("Crypto Prices 2", {
                 body: btcString1,
                 timeout: 4000,
@@ -53,11 +54,11 @@ $(function() {
                     this.close();
                 }
             });
-            /*
+            
             $.notify("Last Price", {
                 title: btcString
             });
-            */
+            
             /*
             var priceElemet = '<div>' +
                 '<div class="heading_notify"> Last price of coins</div>' +
